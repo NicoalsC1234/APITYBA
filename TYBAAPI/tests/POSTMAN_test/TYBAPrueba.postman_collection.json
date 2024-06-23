@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "299590df-0a28-4f0f-97cd-28231463cfe4",
+		"name": "TYBAPrueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12884378"
+	},
+	"item": [
+		{
+			"name": "Login exitoso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"testuser\", \"password\": \"password123\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/routes/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"routes",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rogistro exitoso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"test6\", \"password\": \"password123\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/routes/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"routes",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout exitoso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2Nzc5OGJjMDhkY2ZmNTQ4NGFmNjAzNCIsImlhdCI6MTcxOTExNTMzMSwiZXhwIjoxNzE5MTE4OTMxfQ.7uBYxm98_jXy6TaJG5tGS2xvD2wH7mqxaKCMgFh-f5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prueba restaurantes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2Nzc5OGJjMDhkY2ZmNTQ4NGFmNjAzNCIsImlhdCI6MTcxOTEyMDk5NywiZXhwIjoxNzE5MTI0NTk3fQ.iq8mVdLZsOFmLYqoJ24EbxTqvbb8p8EL8zYFTIDG_OM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/restaurants/nearby?latitude=40.7128&longitude=-74.0060",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurants",
+						"nearby"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "40.7128"
+						},
+						{
+							"key": "longitude",
+							"value": "-74.0060"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
